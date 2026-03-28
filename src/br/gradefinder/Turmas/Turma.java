@@ -1,6 +1,4 @@
-package br.gradefinder.classes;
-
-import br.gradefinder.Disciplina;
+package br.gradefinder.Turmas;
 
 public class Turma {
     Disciplina a;

@@ -1,3 +1,5 @@
+package br.gradefinder.Turmas;
+
 abstract class ComponenteCurricular {
     protected String nome;
     protected String id;
