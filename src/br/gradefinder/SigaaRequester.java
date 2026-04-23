@@ -12,12 +12,20 @@ public class SigaaRequester implements API {
     }
 
     @Override
-    public Disciplina mandarRequest(String id_materia) {
+    public Disciplina mandarRequest(String identificador, String tipo) throws Exception {
         if (!podeFazerRequest()) return null;
 
         ultima_request = LocalTime.now();
 
         return new Disciplina(); // TODO
+    }
+
+    public Disciplina mandarRequestID(String id) throws Exception {
+        return mandarRequest(id, "id");
+    }
+
+    public Disciplina mandarRequestNome(String nome) throws Exception {
+        return mandarRequest(nome, "nome");
     }
 
     @Override

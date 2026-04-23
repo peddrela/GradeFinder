@@ -30,4 +30,11 @@ public class Disciplina {
     public String toString() {
       return "Nome: " + this.nome + "; ID: " + this.id;
     }
+
+    public String getNome() {
+        return this.nome;
+    }
+    public String getID() {
+        return this.id;
+    }
 }
