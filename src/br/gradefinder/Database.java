@@ -11,13 +11,13 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class Database {
-    ArrayList<Disciplina> disciplinas;
+    Repositorio<Disciplina> repositorio;
     HashMap<String, Disciplina> disciplinaPorID;
     HashMap<String, Disciplina> disciplinaPorNome;
     SigaaRequester requester;
 
     public Database(String arquivo_salvo_json) {
-        disciplinas = new ArrayList<>();
+        repositorio = new Repositorio<>();
         disciplinaPorID = new HashMap<>();
         disciplinaPorNome = new HashMap<>();
 
@@ -69,10 +69,7 @@ public class Database {
     }
 
     public ArrayList<Disciplina> acharDesbloqueios(Disciplina disciplina) {
-        return acharPorPred(d -> d.pegarDependencias().contains(disciplina) );
-    }
-    public <P extends Predicate<Disciplina>> ArrayList<Disciplina> acharPorPred(P pred) {
-        return disciplinas.stream().filter(pred).collect(Collectors.toCollection(ArrayList::new));
+        return repositorio.filtrar(d -> d.pegarDependencias().contains(disciplina));
     }
 
     private void carregarArquivoJson(String arquivo_salvo_json) {
@@ -101,7 +98,7 @@ public class Database {
     }
 
     private void adicionarDisciplina(Disciplina disciplina) {
-        disciplinas.add(disciplina);
+        repositorio.adicionar(disciplina);
         disciplinaPorID.put(disciplina.getID(), disciplina);
         disciplinaPorNome.put(disciplina.getNome(), disciplina);
     }
