@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.nio.file.*;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class Database {
     ArrayList<Disciplina> disciplinas;
@@ -29,7 +31,9 @@ public class Database {
 
         if (disciplina == null) {
             // TODO melhorar essa forma de esperar
-            while(!requester.podeFazerRequest()) {}
+            while(true) {
+                if (requester.podeFazerRequest()) break;
+            }
 
             try {
                 disciplina = requester.mandarRequestID(id);
@@ -62,6 +66,13 @@ public class Database {
         }
 
         return disciplina;
+    }
+
+    public ArrayList<Disciplina> acharDesbloqueios(Disciplina disciplina) {
+        return acharPorPred(d -> d.pegarDependencias().contains(disciplina) );
+    }
+    public <P extends Predicate<Disciplina>> ArrayList<Disciplina> acharPorPred(P pred) {
+        return disciplinas.stream().filter(pred).collect(Collectors.toCollection(ArrayList::new));
     }
 
     private void carregarArquivoJson(String arquivo_salvo_json) {

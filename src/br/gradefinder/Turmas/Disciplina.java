@@ -20,11 +20,11 @@ public class Disciplina {
     public void inserirDependencia() {}
     public void inserirEquivalencia() {}
 
-    public Disciplina pegarDependencias() {
-        return new Disciplina();
+    public ArrayList<Disciplina> pegarDependencias() {
+        return new ArrayList<>(dependencias);
     }
-    public Disciplina pegarEquivalencias() {
-        return new Disciplina();
+    public ArrayList<Disciplina> pegarEquivalencias() {
+        return new ArrayList<>(equivalencias);
     }
 
     public String toString() {
