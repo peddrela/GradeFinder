@@ -1,4 +1,4 @@
-package br.gradefinder;
+package br.gradefinder.Sigaa;
 
 import java.time.LocalTime;
 

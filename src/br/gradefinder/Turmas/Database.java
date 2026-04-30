@@ -1,14 +1,12 @@
-package br.gradefinder;
+package br.gradefinder.Turmas;
 
-import br.gradefinder.Turmas.Disciplina;
-import br.gradefinder.MateriaException.ExceptionType;
+import br.gradefinder.Sigaa.SigaaRequester;
+import br.gradefinder.Turmas.MateriaException.ExceptionType;
 
 import java.io.IOException;
 import java.nio.file.*;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.function.Predicate;
-import java.util.stream.Collectors;
 
 public class Database {
     Repositorio<Disciplina> repositorio;

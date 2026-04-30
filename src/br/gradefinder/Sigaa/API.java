@@ -1,4 +1,4 @@
-package br.gradefinder;
+package br.gradefinder.Sigaa;
 
 import br.gradefinder.Turmas.Disciplina;
 

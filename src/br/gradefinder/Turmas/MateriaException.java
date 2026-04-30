@@ -1,4 +1,4 @@
-package br.gradefinder;
+package br.gradefinder.Turmas;
 
 public class MateriaException extends Exception {
 
