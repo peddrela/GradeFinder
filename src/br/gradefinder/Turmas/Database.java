@@ -31,6 +31,11 @@ public class Database {
             // TODO melhorar essa forma de esperar
             while(true) {
                 if (requester.podeFazerRequest()) break;
+                try {
+                    Thread.sleep(20);
+                } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt();
+                }
             }
 
             try {
