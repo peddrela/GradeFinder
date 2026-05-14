@@ -1,18 +1,13 @@
-package br.gradefinder;
+package com.GradeFinder.gradefinder;
 
-import br.gradefinder.Turmas.Database;
-import br.gradefinder.Turmas.Disciplina;
+import com.GradeFinder.gradefinder.Turmas.Database;
+import com.GradeFinder.gradefinder.Turmas.Disciplina;
 
 import java.lang.annotation.AnnotationTypeMismatchException;
 
-@EhMain(version = 2)
+//@EhMain(version = 2)
 public class Main {
     public static void main(String[] args) {
-        if (!Main.class.isAnnotationPresent(EhMain.class)) {
-            System.err.println("Não possui annotation 'EhMain'");
-            System.exit(1);
-        }
-
         Database db = new Database("db.json");
 
         try {

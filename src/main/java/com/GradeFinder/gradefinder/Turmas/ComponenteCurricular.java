@@ -1,4 +1,4 @@
-package br.gradefinder.Turmas;
+package com.GradeFinder.gradefinder.Turmas;
 
 abstract class ComponenteCurricular {
     protected String nome;

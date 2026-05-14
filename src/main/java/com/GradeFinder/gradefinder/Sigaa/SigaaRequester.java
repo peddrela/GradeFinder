@@ -1,8 +1,8 @@
-package br.gradefinder.Sigaa;
+package com.GradeFinder.gradefinder.Sigaa;
 
 import java.time.LocalTime;
 
-import br.gradefinder.Turmas.Disciplina;
+import com.GradeFinder.gradefinder.Turmas.Disciplina;
 
 public class SigaaRequester implements API {
     LocalTime ultima_request;

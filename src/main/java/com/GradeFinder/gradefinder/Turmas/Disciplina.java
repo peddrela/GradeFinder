@@ -1,4 +1,4 @@
-package br.gradefinder.Turmas;
+package com.GradeFinder.gradefinder.Turmas;
 
 import java.util.ArrayList;
 
