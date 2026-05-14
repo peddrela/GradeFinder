@@ -1,7 +1,7 @@
-package br.gradefinder.Turmas;
+package com.GradeFinder.gradefinder.Turmas;
 
-import br.gradefinder.Sigaa.SigaaRequester;
-import br.gradefinder.Turmas.MateriaException.ExceptionType;
+import com.GradeFinder.gradefinder.Sigaa.SigaaRequester;
+import com.GradeFinder.gradefinder.Turmas.MateriaException.ExceptionType;
 
 import java.io.IOException;
 import java.nio.file.*;

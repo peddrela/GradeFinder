@@ -1,4 +1,4 @@
-package br.gradefinder.Turmas;
+package com.GradeFinder.gradefinder.Turmas;
 
 public class AtividadeComplementar extends ComponenteCurricular {
     private int horas;
